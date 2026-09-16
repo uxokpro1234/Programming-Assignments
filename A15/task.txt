@@ -1,0 +1,21 @@
+### A15
+
+Create the program in both **C++ and Python**.
+
+The program must:
+
+* Read all required input values from the keyboard.
+* Display all calculated results on the screen.
+* Display an error message when the user enters invalid data.
+* Allow the program to be executed repeatedly without closing it.
+
+The submission must include:
+
+1. Commented C++ source code.
+2. Python source code saved as a `.txt` file.
+3. A test plan with test results.
+
+For additional requirements, refer to the **Lab Requirements**.
+
+**Task A15:**
+Given the coordinates of the three vertices of a triangle, calculate the lengths of **all three heights** of the triangle.
