@@ -31,15 +31,15 @@ public class Main {
                 System.out.print("C y: ");
                 double y3 = Double.parseDouble(scanner.nextLine());
 
-                // Calculate the three side lengths
+                //calculate the three side lengths
                 double a = distance(x2, y2, x3, y3);
                 double b = distance(x1, y1, x3, y3);
                 double c = distance(x1, y1, x2, y2);
 
-                // Calculate the triangle area
+                //calculate the triangle area
                 double area = triangleArea(x1, y1, x2, y2, x3, y3);
 
-                // Check whether the three points form a valid triangle
+                //check whether the three points form a valid triangle
                 if (area == 0) {
                     System.out.println("Error: The three points do not form a triangle.");
                 } else {
@@ -59,7 +59,7 @@ public class Main {
                 System.out.println("Error: Invalid input. Please enter numbers only.");
             }
 
-            // Ask whether the user wants to run the program again
+            //ask whether the user wants to run the program again
             System.out.print("\nRun the program again? (y/n): ");
             String answer = scanner.nextLine();
 
@@ -72,12 +72,12 @@ public class Main {
         System.out.println("Program finished.");
     }
 
-    // Calculates the distance between two points
+    //calculates the distance between two points
     public static double distance(double x1, double y1, double x2, double y2) {
         return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
     }
 
-    // Calculates the area of the triangle using the determinant formula
+    //calculates the area of the triangle using the determinant formula
     public static double triangleArea(double x1, double y1, double x2, double y2, double x3, double y3) {
         return Math.abs(x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2)) / 2.0;
     }
