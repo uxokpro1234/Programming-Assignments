@@ -1,11 +1,13 @@
 #include <iostream>
 #include <vector>
+#include <limits>
 
 using namespace std;
 vector<int> dividers;
 
-//when int j = 0, it doesnt work :( fak you
+//when int j = 0, it doesnt work(cant divide by 0) :( fak you
 //devider logic
+
 void divide(int i) {
     for (int j = 1; j <= i; j++) {
         //if number divides by j without decimals, it works(is divideable) !!!
@@ -46,13 +48,17 @@ int main() {
         //incorrect data type
         if (cin.fail()) {
             cout << "Error: incorrect data type!" << endl;
-            return 0;
+
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+            continue;
         }
 
         //invalid numbers
         if (a <= 0 || b <= 0) {
             cout << "Error: numbers must be natural numbers!!!" << endl;
-            return 0;
+            continue;
         }
         //debug
         //cout << a << " " << b << endl;
