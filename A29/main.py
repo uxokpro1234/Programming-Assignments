@@ -34,3 +34,4 @@ while True:
 
     except ValueError:
         print("Error: incorrect data type!")
+        continue
