@@ -27,10 +27,15 @@ while True:
         findDividers()
         print()
 
-        c = input("Do you want to continue? Y/n: ")
+        while True:
+            c = input("Do you want to continue? Y/n: ").lower
 
-        if c.lower() != "y":
-            break
+            if c == "y":
+                break
+            elif c == "n":
+                exit()
+            else:
+                print("Error: wrong char")
 
     except ValueError:
         print("Error: incorrect data type!")
